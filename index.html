@@ -464,20 +464,14 @@
             line-height: 1.6;
         }
 
-        /* =================================================================
-        CHANGED CODE: Modernized Reviews Carousel Styles
-        ORIGINAL: 
-        .review-section { max-width: 1200px; ... }
-        .review-item { padding: 3rem; background: white; ... }
-        (Basic layout with simple shadow)
-
-        NEW: 
-        Added glassmorphic background, centered "Card" design, 
-        decorative quote elements, star ratings, and pagination dots.
-        =================================================================
+        /* ====================================================================
+        CHANGED: REVIEW SECTION CSS - Redesigned for Sleekness 
+        Original code used a simple border-top and basic layout.
+        New code uses glassmorphism shadows, centered layout, and refined typography.
+        ====================================================================
         */
         .review-section {
-            max-width: 1000px; /* Constrained width for better focus */
+            max-width: 1000px; 
             margin: 6rem auto;
             padding: 0 2rem;
             position: relative;
@@ -494,16 +488,17 @@
 
         .carousel {
             position: relative;
-            overflow: visible; /* Allow shadow to bleed */
+            padding: 0 20px; /* Space for absolute arrows if needed */
         }
 
         .carousel-viewport {
             overflow: hidden;
             border-radius: 24px;
-            background: white;
-            box-shadow: 0 20px 60px rgba(0, 15, 137, 0.1), 0 0 0 1px rgba(0, 15, 137, 0.05);
-            /* Subtle blue gradient border effect at top */
-            border-top: 4px solid var(--accent);
+            /* REPLACED: Simple white bg and border-top */
+            background: #ffffff;
+            /* NEW: Deep, sleek shadow and subtle border */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0,0,0,0.03);
+            position: relative;
         }
 
         .carousel-inner {
@@ -513,50 +508,59 @@
 
         .review-item {
             min-width: 100%;
-            padding: 4rem 3rem;
+            padding: 5rem 4rem 4rem; /* Increased padding */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
             position: relative;
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(37, 99, 235, 0.02) 100%); /* Subtle gradient */
         }
 
-        /* Decorative Quote Background */
+        /* REPLACED: Old offset quote mark */
         .review-item::before {
             content: '“';
             position: absolute;
             top: 20px;
-            left: 40px;
-            font-size: 12rem;
-            line-height: 1;
-            color: var(--phthalo);
-            opacity: 0.06;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10rem;
+            line-height: 0.8;
+            background: linear-gradient(180deg, #E5E7EB 0%, rgba(255,255,255,0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-family: serif;
             pointer-events: none;
+            z-index: 1;
+            opacity: 0.5;
         }
 
         .review-stars {
             display: flex;
-            gap: 4px;
-            margin-bottom: 1.5rem;
+            gap: 6px;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
         }
 
         .review-stars svg {
-            width: 20px;
-            height: 20px;
-            fill: #FFB02E; /* Gold */
+            width: 22px;
+            height: 22px;
+            fill: #FFB02E; 
             stroke: #E59400;
-            stroke-width: 1.5;
+            stroke-width: 1;
+            filter: drop-shadow(0 2px 4px rgba(230, 148, 0, 0.2)); /* Glow effect */
         }
 
         .review-text {
-            font-size: 1.25rem;
+            /* CHANGED: Larger, cleaner font, removed italics */
+            font-size: 1.35rem; 
             line-height: 1.6;
             color: var(--text);
-            font-style: italic;
-            margin-bottom: 2rem;
-            max-width: 80%;
+            font-weight: 500; 
+            margin-bottom: 2.5rem;
+            max-width: 85%;
             position: relative;
             z-index: 2;
         }
@@ -565,90 +569,94 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 0.25rem;
+            gap: 0.5rem;
+            position: relative;
+            z-index: 2;
         }
 
         .author-name {
-            font-weight: 700;
+            font-weight: 800;
             color: var(--phthalo);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            letter-spacing: -0.01em;
         }
 
         .author-verified {
             font-size: 0.8rem;
-            color: var(--accent);
+            color: #059669; /* Green for verified confidence */
+            background: rgba(5, 150, 105, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            font-weight: 600;
+            font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 6px;
         }
 
-        /* Navigation Buttons */
+        /* Navigation Buttons - Updated */
         .carousel-btn {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             background: white;
-            color: var(--phthalo);
-            border: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            color: var(--text);
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             cursor: pointer;
             z-index: 10;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             transition: all 0.2s ease;
         }
 
         .carousel-btn:hover {
             background: var(--phthalo);
             color: white;
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 8px 24px rgba(0, 15, 137, 0.2);
+            border-color: var(--phthalo);
+            box-shadow: 0 8px 20px rgba(0, 15, 137, 0.2);
+            transform: translateY(-50%) scale(1.05);
         }
 
-        .prev { left: -25px; }
-        .next { right: -25px; }
+        .prev { left: -24px; }
+        .next { right: -24px; }
 
         /* Pagination Dots */
         .carousel-dots {
             display: flex;
             justify-content: center;
-            gap: 10px;
-            margin-top: 2rem;
+            gap: 8px;
+            margin-top: 2.5rem;
         }
 
         .dot {
-            width: 10px;
-            height: 10px;
-            background: rgba(0, 15, 137, 0.2);
-            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            background: #D1D5DB;
+            border-radius: 4px; /* Pill shape capability */
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .dot.active {
             background: var(--phthalo);
-            transform: scale(1.2);
-            width: 24px; /* elongated dot for active state */
-            border-radius: 10px;
+            width: 32px; /* Elongated active state */
         }
 
         @media (max-width: 768px) {
             .review-section { padding: 0 1.5rem; }
-            .review-item { padding: 3rem 1.5rem; }
-            .review-item::before { font-size: 8rem; left: 10px; top: 10px; }
-            .review-text { font-size: 1.1rem; max-width: 100%; }
-            .carousel-btn { display: none; } /* Hide arrows on mobile, rely on swipe/dots */
-            .prev { left: 0; }
-            .next { right: 0; }
+            .review-item { padding: 4rem 1.5rem 3rem; }
+            .review-text { font-size: 1.15rem; max-width: 100%; }
+            /* Hide external arrows on mobile for cleaner look */
+            .carousel-btn { display: none; } 
         }
+        /* ==================================================================== */
 
         /* FAQ Section */
         .faq-section {
@@ -2136,10 +2144,21 @@
                 title: "Select Computer Type",
                 options: [
                     { name: "Windows Laptop", icon: 'laptop', next: 'comp-brand' },
+                    { name: "MacBook / iMac", icon: 'laptop', next: 'mac-models' },
                     { name: "Desktop PC", icon: 'laptop', next: 'comp-pc-issues' },
                     { name: "Chromebook", icon: 'laptop', next: 'comp-issues' }
                 ]
             },
+
+            'mac-models': {
+                title: "Select Mac Model",
+                options: [
+                    { name: "MacBook Pro", icon: 'laptop', next: 'comp-issues' },
+                    { name: "MacBook Air", icon: 'laptop', next: 'comp-issues' },
+                    { name: "iMac / Mac Mini", icon: 'laptop', next: 'comp-pc-issues' }
+                ]
+            },
+
             'comp-brand': {
                 title: "Select Brand",
                 options: [
@@ -2171,7 +2190,7 @@
                 ]
             },
 
-            // === MACBOOKS ===
+            // === MACBOOKS (Direct Access from Main Menu) ===
             'macbooks': {
                 title: "Select Mac Model",
                 options: [
