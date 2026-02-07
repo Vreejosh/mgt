@@ -1,0 +1,3360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacroGeeks Tech - DFW Apple Repair, Gaming & MacBook Data Recovery Services</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" type="image/svg+xml">
+    
+        <!-- ====================================================================
+    CHANGED: Added id to meta description + added canonical tag (dynamic for ?page=...)
+    ORIGINAL:
+    <meta name="description" content="Expert tech repair in Richardson, TX. iPhone, MacBook, PC, gaming console repair, data recovery & IT services. Walk-ins welcome. Free diagnostics.">
+
+    CHANGED:
+    <meta id="meta-description" name="description" content="Expert tech repair in Richardson, TX. iPhone, MacBook, PC, gaming console repair, data recovery & IT services. Walk-ins welcome. Free diagnostics.">
+    <link id="canonical-url" rel="canonical" href="">
+    ==================================================================== -->
+<meta id="meta-description" name="description" content="Expert tech repair in Richardson, TX. iPhone, MacBook, PC, gaming console repair, data recovery & IT services. Walk-ins welcome. Free diagnostics.">
+    <!-- SEO: Canonical URL (updated dynamically for ?page=...) -->
+    <link id="canonical-url" rel="canonical" href="">
+
+    <meta name="keywords" content="tech repair richardson, iphone repair, macbook repair, data recovery, computer repair dallas, gaming console repair, richardson tx tech repair, it services richardson">
+    <!-- ====================================================================
+CHANGED: Added local geo meta tags for Richardson, TX service radius context (SEO helper)
+ORIGINAL: (no geo meta tags)
+CHANGED: Added geo.placename / geo.region / geo.position / ICBM
+==================================================================== -->
+<meta name="geo.placename" content="Richardson, TX">
+<meta name="geo.region" content="US-TX">
+<meta name="geo.position" content="32.9601;-96.7332">
+<meta name="ICBM" content="32.9601, -96.7332">
+    <meta property="og:title" content="MacroGeeks Tech | Professional Tech Repair & IT Services">
+    <meta property="og:description" content="Trusted tech repair in Richardson, TX since 2010. Free diagnostics, same-day service, 15+ years experience.">
+    <meta property="og:type" content="website">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "MacroGeeks Tech",
+      "telephone": "+1-972-643-8482",
+      "email": "macrogeekstech@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "933 Custer Rd",
+        "addressLocality": "Richardson",
+        "addressRegion": "TX",
+        "postalCode": "75080",
+        "addressCountry": "US"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 32.9601, "longitude": -96.7332 },
+"areaServed": {
+  "@type": "GeoCircle",
+  "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 32.9601, "longitude": -96.7332 },
+  "radius": 80467
+},
+"serviceArea": "Within ~50 miles of Richardson, TX",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "20:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "16:00" }
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --phthalo: #000F89;
+            --phthalo-light: #1E3A8A;
+            --phthalo-dark: #000B5E;
+            --accent: #2563EB;
+            --text: #1F2937;
+            --text-light: #6B7280;
+            --bg: #FAFBFC;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: linear-gradient(135deg, #fafbff 0%, #f0f4ff 100%);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden; /* Prevent horizontal scroll on mobile */
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0; 
+            border-bottom: 1px solid rgba(0, 15, 137, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-size: 1.5rem; 
+            font-weight: 800;
+            text-transform: uppercase;
+            color: var(--phthalo);
+            letter-spacing: -0.02em;
+            z-index: 1002; 
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem; 
+            align-items: center;
+        }
+
+        .nav-link {
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--phthalo);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--phthalo); 
+            font-weight: 700;      
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.6rem 1.25rem;
+            border: 2px solid rgba(0, 15, 137, 0.1);
+            border-radius: 50px;   
+            transition: all 0.3s ease;
+            margin-left: 1rem;
+        }
+
+        .nav-phone:hover {
+            background: var(--phthalo);
+            color: white;
+            border-color: var(--phthalo);
+            box-shadow: 0 4px 12px rgba(0, 15, 137, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Menu Toggle Button (Hidden on Desktop) */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1002;
+        }
+        
+        .menu-toggle span {
+            display: block;
+            width: 25px;
+            height: 2px;
+            background-color: var(--phthalo);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 3rem 2rem 3rem;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, var(--phthalo) 0%, var(--accent) 50%, #60A5FA 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: var(--phthalo);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-logo {
+            width: 80px;
+            height: auto;
+            filter: drop-shadow(0 4px 12px rgba(0, 15, 137, 0.15));
+        }
+
+        .mission {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 3rem;
+        }
+
+        .mission-highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        
+        /* ====================================================================
+        CHANGED: HERO CTA (Fast Free Quote)
+        - Added a modern, high-conversion CTA rectangle under "no appointment needed"
+        ==================================================================== */
+        .quote-cta {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.15rem 1.25rem;
+            margin: -1.75rem 0 2.25rem; /* Pull closer to mission text, keep spacing before quick services */
+            border: none;
+            cursor: pointer;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--accent) 0%, #1e40af 55%, var(--phthalo) 100%);
+            color: white;
+            text-align: left;
+            box-shadow: 0 14px 30px rgba(37, 99, 235, 0.22);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .quote-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 20% 10%, rgba(255,255,255,0.22) 0%, transparent 55%);
+            pointer-events: none;
+        }
+
+        .quote-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 40px rgba(0, 15, 137, 0.26);
+        }
+
+        .quote-cta:active {
+            transform: translateY(-1px);
+        }
+
+        .quote-cta-left {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quote-cta-title {
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+
+        .quote-cta-subtitle {
+            font-size: 0.9rem;
+            opacity: 0.92;
+            font-weight: 500;
+        }
+
+        .quote-cta-right {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            position: relative;
+            z-index: 1;
+            flex-shrink: 0;
+        }
+
+        .quote-cta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .quote-cta-arrow {
+            width: 36px;
+            height: 36px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.25s ease, background 0.25s ease;
+        }
+
+        .quote-cta:hover .quote-cta-arrow {
+            transform: translateX(2px);
+            background: rgba(255, 255, 255, 0.22);
+        }
+
+        /* Quote Modal Form */
+        .quote-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .quote-form label {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        .quote-form input[type="email"],
+        .quote-form textarea,
+        .quote-form input[type="file"] {
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .quote-form input[type="email"],
+        .quote-form textarea {
+            width: 100%;
+            padding: 0.9rem 0.95rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 15, 137, 0.14);
+            background: #fbfdff;
+            outline: none;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .quote-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .quote-form input[type="email"]:focus,
+        .quote-form textarea:focus {
+            border-color: rgba(37, 99, 235, 0.6);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
+        }
+
+        .file-hint {
+            font-size: 0.82rem;
+            color: var(--text-light);
+            line-height: 1.4;
+            margin-top: -0.25rem;
+        }
+
+        .quote-submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: var(--phthalo);
+            color: white;
+            padding: 0.95rem 1.1rem;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .quote-submit:hover {
+            background: var(--phthalo-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 22px rgba(0, 15, 137, 0.22);
+        }
+
+        .quote-disclaimer {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            line-height: 1.55;
+        }
+
+        @media (max-width: 640px) {
+            .quote-cta { margin: -1.25rem 0 1.75rem; padding: 1rem 1rem; }
+            .quote-cta-title { font-size: 1rem; }
+            .quote-cta-subtitle { font-size: 0.86rem; }
+        }
+        /* ==================================================================== */
+.services-quick {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+        }
+
+        .service-quick {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 15, 137, 0.08);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .service-quick:hover {
+            background: linear-gradient(135deg, #f8fbff, #f0f7ff);
+            border-color: var(--phthalo);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 15, 137, 0.12);
+        }
+
+        .service-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--phthalo) 0%, var(--accent) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .service-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke: white;
+            fill: none;
+        }
+
+        .service-quick span {
+            font-weight: 500;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .hero-image-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 15, 137, 0.1);
+            background: #eef2ff;
+        }
+        
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-visual-wrapper {
+            padding: 0 3rem 4rem 3rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-visual {
+            width: 100%;
+            max-width: 1400px;
+            min-height: 200px;
+            background: linear-gradient(135deg, var(--phthalo) 0%, #1e40af 50%, var(--accent) 100%);
+            border-radius: 8px; 
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 15, 137, 0.25);
+        }
+
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-visual-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem;
+        }
+
+        .visual-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            width: 100%;
+        }
+
+        .visual-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .visual-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+        }
+
+        .visual-item svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            fill: none;
+        }
+
+        .visual-item span {
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .visual-item p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        /* Info Bar */
+        .info-bar {
+            background: white;
+            padding: 4rem 3rem;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .info-container {
+            max-width: 1400px; 
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .info-box {
+            background: var(--bg);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 15, 137, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .map-box {
+            padding: 0 !important;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            background: #222;
+        }
+        
+        .map-box iframe {
+            filter: invert(90%) hue-rotate(180deg) contrast(1.1);
+            transition: filter 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-4px);
+        }
+
+        .info-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--phthalo);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .info-box h3 svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--phthalo);
+            fill: none;
+        }
+
+        .info-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .info-list li {
+            color: var(--text);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-list li::before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: var(--phthalo);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .privacy-note {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* ====================================================================
+        CHANGED: REVIEW SECTION CSS - Redesigned for Sleekness 
+        Original code used a simple border-top and basic layout.
+        New code uses glassmorphism shadows, centered layout, and refined typography.
+        ====================================================================
+        */
+        .review-section {
+            max-width: 1000px; 
+            margin: 6rem auto;
+            padding: 0 2rem;
+            position: relative;
+        }
+
+        .review-section h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--phthalo);
+            text-align: center;
+            margin-bottom: 3rem;
+            letter-spacing: -0.02em;
+        }
+
+        .carousel {
+            position: relative;
+            padding: 0 20px; /* Space for absolute arrows if needed */
+        }
+
+        .carousel-viewport {
+            overflow: hidden;
+            border-radius: 24px;
+            /* REPLACED: Simple white bg and border-top */
+            background: #ffffff;
+            /* NEW: Deep, sleek shadow and subtle border */
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0,0,0,0.03);
+            position: relative;
+        }
+
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .review-item {
+            min-width: 100%;
+            padding: 5rem 4rem 4rem; /* Increased padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(37, 99, 235, 0.02) 100%); /* Subtle gradient */
+        }
+
+        /* REPLACED: Old offset quote mark */
+        .review-item::before {
+            content: '“';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 10rem;
+            line-height: 0.8;
+            background: linear-gradient(180deg, #E5E7EB 0%, rgba(255,255,255,0) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: serif;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.5;
+        }
+
+        .review-stars {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .review-stars svg {
+            width: 22px;
+            height: 22px;
+            fill: #FFB02E; 
+            stroke: #E59400;
+            stroke-width: 1;
+            filter: drop-shadow(0 2px 4px rgba(230, 148, 0, 0.2)); /* Glow effect */
+        }
+
+        .review-text {
+            /* CHANGED: Larger, cleaner font, removed italics */
+            font-size: 1.35rem; 
+            line-height: 1.6;
+            color: var(--text);
+            font-weight: 500; 
+            margin-bottom: 2.5rem;
+            max-width: 85%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .review-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .author-name {
+            font-weight: 800;
+            color: var(--phthalo);
+            font-size: 1.15rem;
+            letter-spacing: -0.01em;
+        }
+
+        .author-verified {
+            font-size: 0.8rem;
+            color: #059669; /* Green for verified confidence */
+            background: rgba(5, 150, 105, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Navigation Buttons - Updated */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: white;
+            color: var(--text);
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .carousel-btn:hover {
+            background: var(--phthalo);
+            color: white;
+            border-color: var(--phthalo);
+            box-shadow: 0 8px 20px rgba(0, 15, 137, 0.2);
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .prev { left: -24px; }
+        .next { right: -24px; }
+
+        /* Pagination Dots */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 2.5rem;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            background: #D1D5DB;
+            border-radius: 4px; /* Pill shape capability */
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dot.active {
+            background: var(--phthalo);
+            width: 32px; /* Elongated active state */
+        }
+
+        @media (max-width: 768px) {
+            .review-section { padding: 0 1.5rem; }
+            .review-item { padding: 4rem 1.5rem 3rem; }
+            .review-text { font-size: 1.15rem; max-width: 100%; }
+            /* Hide external arrows on mobile for cleaner look */
+            .carousel-btn { display: none; } 
+        }
+        /* ==================================================================== */
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 3rem;
+        }
+
+        .faq-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--phthalo);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: var(--text);
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--bg);
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            color: var(--phthalo);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 1.25rem 1.25rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Services Section */
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .services-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 3rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--phthalo);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 15, 137, 0.08);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .service-card:hover {
+            border-color: var(--phthalo);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 15, 137, 0.12);
+        }
+
+        .service-card-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--phthalo) 0%, var(--accent) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: white;
+            fill: none;
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem 3rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 15, 137, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .contact-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--phthalo);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .contact-card h3 svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--phthalo);
+            fill: none;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .map-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--phthalo);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            text-decoration: none;
+        }
+
+        .map-button:hover {
+            background: var(--phthalo-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 15, 137, 0.3);
+        }
+
+        .map-button svg {
+            width: 16px;
+            height: 16px;
+            stroke: white;
+            fill: none;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 16px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.9);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .modal.active .modal-content {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            padding: 2rem 2rem 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--phthalo);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 1.75rem;
+            cursor: pointer;
+            color: #999;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .modal-body {
+            padding: 1.5rem 2rem 2rem;
+        }
+
+        /* Flow Container */
+        .flow-container {
+            min-height: 250px;
+        }
+
+        /* Header with Back Button */
+        .flow-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .flow-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--phthalo);
+        }
+
+        .back-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            background: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            color: var(--text);
+        }
+
+        .back-btn:hover {
+            background: var(--phthalo);
+            color: white;
+            border-color: var(--phthalo);
+        }
+
+        /* Interactive Grid Cards */
+        .selection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 1rem;
+        }
+
+        .selection-card {
+            background: #f8faff;
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 15, 137, 0.08);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .selection-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent);
+            background: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .selection-icon {
+            width: 40px;
+            height: 40px;
+            color: var(--phthalo);
+            margin-bottom: 0.25rem;
+        }
+        
+        .selection-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .selection-name {
+            font-weight: 500;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        /* Verification Success State */
+        .verified-box {
+            text-align: center;
+            padding: 2rem;
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 12px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .verified-icon {
+            color: #059669;
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+        }
+
+        .verified-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 2rem;
+            background: var(--phthalo);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        
+        .verified-btn:hover {
+            background: var(--phthalo-dark);
+        }
+
+        .device-grid {
+            display: none; 
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--phthalo-dark), var(--phthalo));
+            color: white;
+            padding: 3rem 3rem 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .social-link svg {
+            width: 18px;
+            height: 18px;
+            stroke: white;
+            fill: none;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 968px) {
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                padding: 3rem 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem; /* Adjusted for better wrap */
+            }
+
+            .info-container {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .visual-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Tablet/Mobile Breakpoint for Menu */
+        @media (max-width: 768px) {
+            .nav {
+                position: fixed;
+                top: 72px; /* Approx header height */
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 2rem;
+                gap: 1.5rem;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease-in-out;
+                z-index: 999;
+            }
+
+            .nav.active {
+                transform: translateY(0);
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: left;
+                font-size: 1.1rem;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid #f0f0f0;
+            }
+
+            .nav-phone {
+                margin-left: 0;
+                margin-top: 1rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .menu-toggle {
+                display: block; /* Show hamburger */
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-content h1 {
+                font-size: 2.25rem; /* Smaller font for phones */
+            }
+
+            .services-quick {
+                grid-template-columns: repeat(2, 1fr); /* 2 Columns instead of 1 */
+            }
+            
+            .service-quick {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.5rem;
+                padding: 1rem 0.5rem;
+            }
+
+            .header-content {
+                padding: 0 1.25rem;
+            }
+            
+            .visual-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-image-container {
+                height: 250px;
+            }
+        }
+    
+        /* =========================
+           SEO / "Phantom" Pages
+           ========================= */
+        .seo-pages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .seo-pages-grid { grid-template-columns: 1fr; }
+        }
+
+        .seo-page-card {
+            background: white;
+            border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 16px;
+            padding: 1.25rem;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+        }
+
+        .seo-page-card h3 { margin: 0 0 0.35rem; }
+        .seo-page-card p { margin: 0.35rem 0 0.75rem; color: var(--text-secondary); }
+        .seo-page-card a { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 700; }
+
+        .seo-page {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.07);
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .seo-page .breadcrumbs {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .seo-page h1 { margin-top: 0; }
+        .seo-page ul { padding-left: 1.2rem; }
+        .seo-page li { margin: 0.4rem 0; }
+
+        /* Accessible "visually hidden" (still indexable) */
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px; width: 1px;
+            overflow: hidden;
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="brand">MACROGEEKS TECH</div>
+            
+            <button class="menu-toggle" aria-label="Toggle Menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav" id="nav-menu" role="navigation">
+                <button class="nav-link" onclick="showSection('home'); toggleMenu()">Home</button>
+                <button class="nav-link" onclick="showSection('services'); toggleMenu()">Services</button>
+                <button class="nav-link" onclick="showSection('contact'); toggleMenu()">Contact</button>
+<!-- ====================================================================
+CHANGED: HEADER NAV - Added FAQ link that scrolls to the FAQ section on Home
+ORIGINAL:
+<button class="nav-link" onclick="showSection('home'); toggleMenu()">Home</button>
+<button class="nav-link" onclick="showSection('services'); toggleMenu()">Services</button>
+<button class="nav-link" onclick="showSection('contact'); toggleMenu()">Contact</button>
+
+CHANGED:
+<button class="nav-link" onclick="showSection('home'); toggleMenu()">Home</button>
+<button class="nav-link" onclick="showSection('services'); toggleMenu()">Services</button>
+<button class="nav-link" onclick="showSection('contact'); toggleMenu()">Contact</button>
+<button class="nav-link" onclick="showSection('home'); toggleMenu(); setTimeout(function(){ var f=document.getElementById('faq'); if(f){ f.scrollIntoView({behavior:'smooth'}); } }, 50)">FAQ</button>
+==================================================================== -->
+<button class="nav-link" onclick="showSection('home'); toggleMenu(); setTimeout(function(){ var f=document.getElementById('faq'); if(f){ f.scrollIntoView({behavior:'smooth'}); } }, 50)">FAQ</button>
+
+                
+                <a href="tel:972-643-8482" class="nav-phone">
+                    <svg width="18" height="18" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    (972) 643-8482
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Tech Repair<br>Done Right</h1>
+                    <p class="mission">
+                        Your trusted technology repair partner in Richardson, TX. <span class="mission-highlight">We fix everything</span> from smartphones to servers with honest service and expert care. Walk in anytime during our hours—<span class="mission-highlight">no appointment needed</span>.
+                    </p>
+                    <!-- ====================================================================
+                    CHANGED: Inserted high-conversion "Get a Fast Free Quote" CTA under the
+                    "no appointment needed" line (opens Formspree quote modal).
+                    ORIGINAL:
+                    <div class="services-quick">
+                    ==================================================================== -->
+                    <button class="quote-cta" type="button" onclick="openModal('quote')" aria-label="Get a fast free quote">
+                        <div class="quote-cta-left">
+                            <div class="quote-cta-title">Get a Fast Free Quote</div>
+                            <div class="quote-cta-subtitle">Tell us what&rsquo;s wrong</div>
+                        </div>
+                        <div class="quote-cta-right">
+                            <span class="quote-cta-pill">Fast reply</span>
+                            <span class="quote-cta-arrow" aria-hidden="true">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M5 12h14"></path>
+                                    <path d="M13 6l6 6-6 6"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </button>
+                    <!-- ==================================================================== -->
+
+                    <div class="services-quick">
+                        <div class="service-quick" onclick="openModal('mobile')">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                            </div>
+                            <span>Mobile Devices</span>
+                        </div>
+                        <div class="service-quick" onclick="openModal('computers')">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                                </svg>
+                            </div>
+                            <span>Computers</span>
+                        </div>
+                        <div class="service-quick" onclick="openModal('gaming')">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                    <polyline points="17 2 12 7 7 2"></polyline>
+                                </svg>
+                            </div>
+                            <span>Gaming Systems</span>
+                        </div>
+                        <div class="service-quick" onclick="openModal('data')">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                </svg>
+                            </div>
+                            <span>Data Recovery</span>
+                        </div>
+                        <div class="service-quick" onclick="openModal('servers')">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                            </div>
+                            <span>Servers</span>
+                        </div>
+                        <div class="service-quick" onclick="openModal('it')">
+                            <div class="service-icon">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                                </svg>
+                            </div>
+                            <span>IT Services</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image-container">
+                    <img src="mgtphoto.jpg" alt="Family Friendly Tech Repair Team">
+                </div>
+            </div>
+
+            <div class="hero-visual-wrapper">
+                <div class="hero-visual">
+                    <div class="hero-visual-content">
+                        <div class="visual-grid">
+                            <div class="visual-item">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>Secure</span>
+                                <p>Encrypted data handling</p>
+                            </div>
+                            <div class="visual-item">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                                <span>Certified</span>
+                                <p>15+ years experience</p>
+                            </div>
+                            <div class="visual-item">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                                <span>Fast</span>
+                                <p>Same-day diagnostics</p>
+                            </div>
+                            <div class="visual-item">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                                <span>Expert</span>
+                                <p>IT & repair specialist</p>
+                            </div>
+                            <div class="visual-item">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                                </svg>
+                                <span>Fair Price</span>
+                                <p>Transparent quotes</p>
+                            </div>
+                            <div class="visual-item">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                                    <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                                    <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                                <span>Quality</span>
+                                <p>Premium parts used</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-bar">
+                <div class="info-container">
+                    
+                    <div class="info-box">
+                        <h3>
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 20h9"></path>
+                                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                            </svg>
+                            15+ Years Experience
+                        </h3>
+                        <p class="privacy-note">
+                            Our lead technician brings over 15 years of expertise in technology repair, IT services, logistics, and sales. Serving the Richardson community since 2010.
+                        </p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            Free Diagnostics
+                        </h3>
+                        <ul class="info-list">
+                            <li>Complete system analysis</li>
+                            <li>Available by phone or walk-in</li>
+                            <li>No obligation estimate</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Hours
+                        </h3>
+                        <ul class="info-list">
+                            <li>Monday - Saturday: 8 AM - 8 PM</li>
+                            <li>Sunday: 10 AM - 4 PM</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-box map-box">
+                        <iframe 
+                            src="https://www.google.com/maps?q=933+Custer+Rd,+Richardson,+TX+75080&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; width: 100%; height: 100%; min-height: 250px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="review-section">
+                <h2>What Our Customers Say</h2>
+                <div class="carousel">
+                    <button class="carousel-btn prev" onclick="prevSlide()" aria-label="Previous review">‹</button>
+                    
+                    <div class="carousel-viewport">
+                        <div class="carousel-inner" id="carouselInner">
+                            <div class="review-item">
+                                <div class="review-stars">
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                </div>
+                                <p class="review-text">"They fixed my macbook very fast and I have had no issues since. Dee is a very nice and knowledgeable guy. I highly encourage you to use them for your repairs."</p>
+                                <div class="review-author">
+                                    <span class="author-name">Leonardo Morales</span>
+                                    <span class="author-verified">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        Verified Customer
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-stars">
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                </div>
+                                <p class="review-text">"I came here to get my macbook fixed due to it having liquid damage and its data recovered. I got greeted by Dee and he is a very kind and helpful person. I recommend everyone to go get their tech devices fixed here."</p>
+                                <div class="review-author">
+                                    <span class="author-name">Samar Siddiqui</span>
+                                    <span class="author-verified">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        Verified Customer
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-stars">
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                </div>
+                                <p class="review-text">"I was having issues with my gaming PC and tried everything but couldn't get it to work but when I brought it here Dee fixed it. I would recommend this place and ask for Dee."</p>
+                                <div class="review-author">
+                                    <span class="author-name">Hilario Esquivel</span>
+                                    <span class="author-verified">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        Verified Customer
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="review-item">
+                                <div class="review-stars">
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                    <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                </div>
+                                <p class="review-text">"Had serious water damage on my device and thought it was beyond saving, but this team completely proved me wrong. They diagnosed the issue quickly, kept me updated throughout the repair, and brought my device back to life like brand new!"</p>
+                                <div class="review-author">
+                                    <span class="author-name">Zidane Nzobe</span>
+                                    <span class="author-verified">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                        Verified Customer
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn next" onclick="nextSlide()" aria-label="Next review">›</button>
+
+                    <div class="carousel-dots" id="carouselDots">
+                        <div class="dot active" onclick="goToSlide(0)"></div>
+                        <div class="dot" onclick="goToSlide(1)"></div>
+                        <div class="dot" onclick="goToSlide(2)"></div>
+                        <div class="dot" onclick="goToSlide(3)"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====================================================================
+CHANGED: FAQ SECTION - Added id="faq" anchor for header navigation + added local SEO FAQ items
+ORIGINAL:
+<div class="faq-section">
+
+CHANGED:
+<div class="faq-section" id="faq">
+==================================================================== -->
+<div class="faq-section" id="faq">
+                <h2>Frequently Asked Questions</h2>
+
+                <!-- ====================================================================
+                CHANGED: Added 3 Local SEO FAQ items (300–800 words each) targeting:
+                - Computer Repair Richardson, TX
+                - Phone Repair Richardson, TX
+                - Data Recovery Richardson, TX
+                These integrate into the existing FAQ accordion.
+                ORIGINAL: FAQ list started immediately with "What types of devices do you repair?"
+                ==================================================================== -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Computer Repair Richardson, TX — What problems do you fix and how fast can you help?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Computer Repair Richardson, TX:</strong> If your PC or laptop is slow, crashing, overheating, or won’t turn on, we can help—fast. Most “computer repair” problems come down to a few root causes: failing storage (HDD/SSD), memory instability, operating‑system corruption, malware, overheating from dust buildup, or power/charging faults. We start with a diagnostic to confirm the real cause (not just the symptom), then recommend the most cost‑effective fix—whether that’s a performance tune‑up, a virus removal, an operating system repair, or a hardware replacement like an SSD upgrade.</p>
+
+<p><strong>Common problems we fix</strong> across Richardson and nearby cities include: Windows updates stuck or failing, random restarts, loud fans, blue screens, “no boot device” errors, slow startup, battery not charging, broken hinges, cracked screens, keyboard/trackpad failures, and malware that hijacks browsers or locks files. We also help with home‑office issues like Wi‑Fi dropouts, printer setup, and basic network troubleshooting. For gamers and power users, we diagnose heat throttling, FPS drops, crashing under load, and storage bottlenecks so your system runs smoothly again.</p>
+
+<p><strong>How we keep it simple:</strong> we explain what we found in plain English, give you options, and keep data safety first. If your computer has important photos, school files, or work documents, tell us up front so we can prioritize non‑destructive steps and discuss backup options before major repairs. In many cases, we can preserve your files even if the system won’t boot by using safe recovery methods or moving data to a healthy drive. And if a repair isn’t worth the cost, we’ll tell you honestly and help you plan the next best step, including migrating your data to a replacement device.</p>
+
+<p><strong>Need computer repair today?</strong> Walk in—no appointment needed—or call <a href="tel:972-643-8482">(972) 643‑8482</a>. Prefer a quick estimate first? Click <strong>“Get a Fast Free Quote”</strong> and describe the issue. If you can, attach a photo of the error screen so we can respond with recommended next steps and a rough price range.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Phone Repair Richardson, TX — Screens, batteries, charging ports, and more</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Phone Repair Richardson, TX:</strong> A damaged phone is more than an inconvenience—your calls, texts, photos, banking apps, and work accounts live on it. We provide fast, careful phone repair for iPhone and Android devices in Richardson and surrounding areas. The most common problems we see are cracked screens, batteries that drain quickly, charging ports that stop working, water exposure, cameras that won’t focus, speakers that sound muffled, and phones that won’t power on. We diagnose the issue, explain what’s going on, and help you choose the best option—repair, data transfer, or replacement planning.</p>
+
+<p><strong>Common phone issues we handle</strong> include: shattered or unresponsive screens, ghost touch, battery swelling or rapid drain, “stuck on Apple logo” or boot loops, overheating, charging only at certain angles, liquid damage, Face ID/Touch ID problems (when possible), microphone issues during calls, weak reception, and camera lens damage. If your phone was dropped, we also check for hidden problems like loose connectors, frame bending, or damage to internal flex cables. If it was exposed to water, don’t keep charging it—bring it in as soon as you can so we can dry and clean it properly before corrosion spreads.</p>
+
+<p><strong>What you can do right now:</strong> if your screen is cracked but the phone still works, avoid pressing on the glass and back up your data if possible. If you can’t back up, we can often help you recover photos and important files. If the phone won’t charge, try a different cable and power adapter first; if it still fails, it’s often the port, battery, or a charging‑circuit issue. We’ll confirm which one so you’re not paying for the wrong fix. We also prioritize protecting your privacy—repairs focus on the hardware problem, and we never ask for more access than needed to verify the repair.</p>
+
+<p><strong>Need phone repair today?</strong> Walk in—no appointment needed—or call <a href="tel:972-643-8482">(972) 643‑8482</a>. Want a fast estimate? Click <strong>“Get a Fast Free Quote”</strong> and tell us your phone model, what happened, and what it’s doing now. If you can, attach a clear photo of the damage or the error message so we can reply with realistic next steps and pricing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Data Recovery Richardson, TX — What are the safest next steps if files are missing?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Data Recovery Richardson, TX:</strong> If you can’t access important photos, documents, or business files, data recovery is a time‑sensitive situation. Whether it’s a laptop drive that clicks, an SSD that suddenly disappears, a phone that won’t boot, or accidental deletion, we take a careful, step‑by‑step approach to maximize the chance of recovery. The first goal is to stop further damage. If a drive is failing, repeated restarts and “DIY” scans can make recovery harder. Bring the device in and tell us what symptoms you’re seeing so we can choose the safest recovery method.</p>
+
+<p><strong>Common data loss scenarios</strong> we help with include: accidental deletion, corrupted operating systems, external drives that won’t mount, “RAW” partitions, water or drop damage, power surge damage, and drives that are very slow or making unusual noises. For phones, common issues include boot loops, black screens, failed updates, and water exposure where the phone powers on but you can’t access storage. We start with a free evaluation when possible, explain the odds, and outline options. If the data is truly critical (legal, business, or irreplaceable family media), we’ll advise the safest path and what to avoid.</p>
+
+<p><strong>What to bring and what to avoid:</strong> bring the device, power adapter, and any related storage (USB drive, SD card, external enclosure). Avoid running repeated recovery programs, avoid opening the device, and do not keep powering a drive on and off if it’s clicking or not detected. For business customers, we can also advise on backup best practices so this doesn’t happen again (simple automated backups, cloud sync, and periodic verification).</p>
+
+<p><strong>Need data recovery help now?</strong> Call <a href="tel:972-643-8482">(972) 643‑8482</a> or walk in—no appointment needed. If you’re not sure what happened, click <strong>“Get a Fast Free Quote”</strong> and describe the symptoms (for example: “clicking,” “not detected,” “asks to format,” or “stuck on logo”). Attach a photo of the error message if you can, and we’ll respond with the safest next steps.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What types of devices do you repair?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We repair smartphones, computers, laptops, gaming systems, servers, tablets, and more. From iPhone to Samsung, MacBook to Dell, PlayStation to Xbox—we handle all major brands.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you offer warranties on repairs?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all repairs come with a 90-day warranty on parts and labor. We stand behind our work and use only high-quality components.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How long do repairs typically take?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most diagnostics are completed the same day. Simple repairs like screen replacements often take 1-2 hours, while more complex issues may require 24-48 hours. We always provide an estimated timeline upfront.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is data recovery guaranteed?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While we have a high success rate, data recovery depends on the extent of damage. We provide a free evaluation and only charge if we successfully recover your data.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do I need an appointment?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No appointment necessary! Walk-ins are welcome during all business hours. However, you're welcome to call ahead if you'd like to ensure immediate service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <div class="services-section">
+                <div class="section-header">
+                    <h2>What We Service</h2>
+                    <p>Comprehensive repair solutions for all your technology needs, including expert data recovery and IT services. Walk in anytime during our hours.</p>
+                </div>
+
+                <div class="service-grid">
+                    <div class="service-card" onclick="openModal('mobile')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3>Mobile Devices</h3>
+                        <p>iPhone, Samsung, Google Pixel, and all major brands. Screen replacement, battery service, water damage recovery, and charging port repair.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('computers')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>Computers & Laptops</h3>
+                        <p>Desktop and laptop repair for all brands. Hardware upgrades, virus removal, diagnostics, and performance optimization.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('macbooks')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <h3>MacBooks & iMacs</h3>
+                        <p>Specialized Apple repair services. Logic board repair, screen replacement, battery service, and macOS troubleshooting.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('tablets')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                        <h3>Tablets</h3>
+                        <p>iPad, Surface, Android tablets. Screen digitizer replacement, charging port repair, battery service, and software fixes.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('gaming')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                <polyline points="17 2 12 7 7 2"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Gaming Systems</h3>
+                        <p>PlayStation, Xbox, Nintendo Switch. HDMI port repair, cooling system service, disc drive repair, and controller fixes.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('servers')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h3>Servers</h3>
+                        <p>Enterprise server maintenance and repair. RAID recovery, power supply replacement, cooling systems, and hardware diagnostics.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('data')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <h3>Data Recovery</h3>
+                        <p>Professional data retrieval from failed hard drives, corrupted storage, damaged devices, and deleted files.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('smarthome')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Smart Home Tech</h3>
+                        <p>Smart displays, home assistants, connected appliances. Setup, configuration, and troubleshooting services.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('it')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
+                        <h3>IT Services</h3>
+                        <p>Network setup, system optimization, security solutions, and technical support for homes and businesses.</p>
+                    </div>
+
+                    <div class="service-card" onclick="openModal('custom')">
+                        <div class="service-card-icon">
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Custom Solutions</h3>
+                        <p>Specialized equipment and unique repair needs. Tailored solutions for industrial, commercial, and residential technology.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="contact-section">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <p>We're here to help with all your tech repair needs. Walk in anytime during our hours or give us a call.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Visit Us
+                        </h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <strong>Address</strong>
+                                933 Custer Rd<br>
+                                Richardson, TX 75080
+                            </div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=933+Custer+Rd+Richardson+TX+75080" target="_blank" class="map-button">
+                                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                                </svg>
+                                Get Directions
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            Call or Email
+                        </h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <strong>Phone</strong>
+                                <a href="tel:972-643-8482" style="color: inherit; text-decoration: none;">(972) 643-8482</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Email</strong>
+                                <a href="mailto:macrogeekstech@gmail.com" style="color: inherit; text-decoration: none;">macrogeekstech@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <strong>Response Time</strong>
+                                Within 24 hours
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Hours
+                        </h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <strong>Monday - Saturday</strong>
+                                8:00 AM - 8:00 PM
+                            </div>
+                            <div class="contact-item">
+                                <strong>Sunday</strong>
+                                10:00 AM - 4:00 PM
+                            </div>
+                            <div class="contact-item">
+                                <strong>Walk-ins Welcome</strong>
+                                No appointment needed
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <h3>
+                            <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            Free Diagnostics
+                        </h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <strong>By Phone</strong>
+                                Call for remote troubleshooting
+                            </div>
+                            <div class="contact-item">
+                                <strong>Walk-In</strong>
+                                Complete system analysis
+                            </div>
+                            <div class="contact-item">
+                                <strong>No Obligation</strong>
+                                Free estimate on all repairs
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- ==========================================
+             SEO "PHANTOM" PAGES
+             - Accessible via links like ?page=iphone-repair
+             - Helps discoverability without adding many separate files
+             ========================================== -->
+        <section id="seo-pages" class="section">
+            <!-- ====================================================================
+            CHANGED: Wrapped SEO index (cards) in #seo-pages-index so we can hide it
+                     when a specific "phantom" page is opened. This makes "View page"
+                     feel like it actually navigates somewhere instead of looking like
+                     nothing happened.
+            ORIGINAL:
+            <div class="section-header">...</div>
+            <div class="seo-pages-grid" id="seo-pages-grid">...</div>
+            <div class="seo-page" id="seo-page-detail" style="display:none;">...</div>
+
+            CHANGED:
+            <div id="seo-pages-index">(header + grid)</div>
+            <div class="seo-page" id="seo-page-detail" style="display:none;">(detail view)</div>
+            ==================================================================== -->
+            <div id="seo-pages-index">
+                <div class="section-header">
+                    <h2>Repair Guides & Service Pages</h2>
+                    <p>Browse common repairs and service categories. These pages are also available via direct links for search discoverability.</p>
+                </div>
+
+                <div class="seo-pages-grid" id="seo-pages-grid">
+                    <!-- Cards injected by JS from PAGE_DEFS -->
+                </div>
+            </div>
+
+            <div class="seo-page" id="seo-page-detail" style="display:none;">
+                <div class="breadcrumbs">
+                    <a href="./" onclick="event.preventDefault(); navigateHome();">Home</a>
+                    <span aria-hidden="true">›</span>
+                    <a href="?page=services" onclick="event.preventDefault(); showSection('seo-pages'); navigateHomeToSeoIndex();">Service Pages</a>
+                    <span aria-hidden="true">›</span>
+                    <span id="seo-breadcrumb-current">Service Page</span>
+                </div>
+                <div id="seo-page-content"></div>
+            </div>
+
+            <!-- Keyword-rich content kept lightweight: visible to crawlers, not intrusive for users -->
+            <div class="visually-hidden" aria-hidden="true">
+                <h2>Tech Repair Keywords</h2>
+                <p>iPhone screen repair Richardson TX, iPhone battery replacement, charging port repair, iPad shattered screen repair, MacBook screen replacement, MacBook battery replacement, keyboard and trackpad replacement, logic board repair, liquid damage repair, data recovery, hard drive replacement, SSD upgrade, RAM upgrade, virus removal, malware removal, PC repair, laptop repair, gaming PC repair, overheating fix, blue screen repair, black screen repair, internet connection problems, network IT services, printer setup, operating system install, computer tune-up.</p>
+            </div>
+        </section>
+</main>
+
+    <div id="modal-mobile" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Mobile Devices</h3>
+                <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-mobile" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-computers" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Computers & Laptops</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-computers" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-macbooks" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>MacBooks & iMacs</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-macbooks" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-tablets" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Tablets</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-tablets" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-gaming" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Gaming Systems</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-gaming" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-servers" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Servers</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-servers" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-data" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Data Recovery</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-data" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-smarthome" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Smart Home Tech</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-smarthome" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-it" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>IT Services</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-it" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-custom" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Custom Solutions</h3>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="flow-custom" class="flow-container"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- ====================================================================
+    CHANGED: Added "Fast Free Quote" modal (Formspree) opened by the new CTA.
+    ORIGINAL: Footer started immediately after the last service modal.
+    ==================================================================== -->
+    <div id="modal-quote" class="modal" onclick="closeModalOnBackdrop(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Get a Fast Free Quote</h3>
+                <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+            </div>
+            <div class="modal-body">
+                <!-- ORIGINAL (Formspree snippet provided):
+                <form action="https://formspree.io/f/xzdrznnw" method="POST" enctype="multipart/form-data">
+                  <label>Your email: <input type="email" name="email"></label>
+                  <label>Your file: <input type="file" name="upload"></label>
+                  <button type="submit">Send</button>
+                </form>
+                -->
+
+                <!-- CHANGED: Modernized Formspree quote form (adds issue description + optional photo) -->
+                <form class="quote-form"
+                      action="https://formspree.io/f/xzdrznnw"
+                      method="POST"
+                      enctype="multipart/form-data">
+                    <label>
+                        Your email
+                        <input type="email" name="email" placeholder="you@email.com" required>
+                    </label>
+
+                    <label>
+                        Describe the issue
+                        <textarea name="issue" placeholder="What device is it? What&rsquo;s happening? When did it start? Any error messages?" required></textarea>
+                    </label>
+
+                    <!-- ====================================================================
+                    CHANGED: Removed optional photo upload from the Fast Free Quote form (no file upload access).
+                    ORIGINAL:
+                    <label>
+                        Optional photo (helps us quote faster)
+                        <input type="file" name="upload" accept="image/*">
+                        <span class="file-hint">You can upload a screenshot or a photo of the device / damage.</span>
+                    </label>
+
+                    CHANGED:
+                    (Removed — quote form now only includes email + "Tell us your issue")
+                    ==================================================================== -->
+
+                    <button class="quote-submit" type="submit">
+                        Send Quote Request
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M22 2L11 13"></path>
+                            <path d="M22 2L15 22l-4-9-9-4 20-7z"></path>
+                        </svg>
+                    </button>
+
+                    <p class="quote-disclaimer">We&rsquo;ll reply as soon as possible (usually same day during business hours). If this is urgent, call <a href="tel:972-643-8482" style="color: var(--phthalo); font-weight: 700; text-decoration: none;">(972) 643-8482</a>.</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ==================================================================== -->
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About MacroGeeks Tech</h4>
+                <p>Expert tech repair and IT services since 2010. Our lead technician brings over 15 years of experience in repair, IT services, logistics, and sales. Serving Richardson with honest, professional service you can trust.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61582561345280" target="_blank" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/macrogeekstech/" target="_blank" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.youtube.com/channel/UCRYFU4Qyqfu2PHc2YI9JFtQ" target="_blank" class="social-link" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/macrogeeks-tech-080519396/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SEO: Lightweight internal links to "phantom" pages for discoverability -->
+            <div class="footer-section">
+                <h4>Repair Pages</h4>
+                <p>Direct links to common service pages.</p>
+                <ul class="footer-links" id="footer-seo-links">
+                    <!-- Links injected by JS -->
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#" onclick="showSection('home'); return false;">Home</a>
+                    <a href="#" onclick="showSection('services'); return false;">Services</a>
+                    <a href="#" onclick="showSection('contact'); return false;">Contact</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <div class="footer-links">
+                    <a href="tel:972-643-8482">(972) 643-8482</a>
+                    <a href="mailto:macrogeekstech@gmail.com">macrogeekstech@gmail.com</a>
+                    <p style="margin-top: 0.5rem;">933 Custer Rd<br>Richardson, TX 75080</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 MacroGeeks Tech. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        // ===== SECTION NAVIGATION =====
+        // ====================================================================
+        // CHANGED: Made showSection() resilient (prevents JS from breaking if an
+        //          id is missing) and returns a boolean.
+        // ORIGINAL:
+        // function showSection(id) {
+        //     document.querySelectorAll('.section').forEach(section => {
+        //         section.classList.remove('active');
+        //     });
+        //     document.getElementById(id).classList.add('active');
+        //     window.scrollTo({ top: 0, behavior: 'smooth' });
+        // }
+        //
+        // CHANGED:
+        // function showSection(id) {
+        //     ... null checks ...
+        //     return true/false
+        // }
+        // ====================================================================
+        function showSection(id) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            const target = document.getElementById(id);
+            if (!target) {
+                console.warn('[showSection] No section found for id:', id);
+                return false;
+            }
+
+            target.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return true;
+        }
+
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
+
+        // ===== MODAL MANAGEMENT & DRILL DOWN LOGIC =====
+        
+        const icons = {
+            'phone': '<svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>',
+            'laptop': '<svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="20" x2="22" y2="20"></line></svg>',
+            'gamepad': '<svg viewBox="0 0 24 24"><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line><rect x="2" y="6" width="20" height="12" rx="2"></rect></svg>',
+            'server': '<svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>',
+            'hdd': '<svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>', // Activity pulse for data
+            'chip': '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>',
+            'broken-screen': '<svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><path d="M12 18h.01"></path><path d="M15 6l-3 4-2-2-3 4"></path></svg>',
+            'battery': '<svg viewBox="0 0 24 24"><rect x="1" y="6" width="18" height="12" rx="2" ry="2"></rect><line x1="23" y1="13" x2="23" y2="11"></line></svg>',
+            'water': '<svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>',
+            'port': '<svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>',
+            'camera': '<svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>',
+            'software': '<svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>',
+            'setup': '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>'
+        };
+
+        const serviceData = {
+            // === MOBILE ===
+            'mobile': {
+                title: "Select Brand",
+                options: [
+                    { name: "iPhone", icon: 'phone', next: 'mobile-iphone' },
+                    { name: "Samsung", icon: 'phone', next: 'mobile-samsung' },
+                    { name: "Google Pixel", icon: 'phone', next: 'mobile-pixel' },
+                    { name: "Other Brands", icon: 'phone', next: 'mobile-other' }
+                ]
+            },
+            'mobile-iphone': {
+                title: "Select iPhone Model",
+                options: [
+                    { name: "iPhone 15 Series", icon: 'phone', next: 'mobile-issues' },
+                    { name: "iPhone 14 Series", icon: 'phone', next: 'mobile-issues' },
+                    { name: "iPhone 13 Series", icon: 'phone', next: 'mobile-issues' },
+                    { name: "iPhone 12 / 11 / X", icon: 'phone', next: 'mobile-issues' },
+                    { name: "iPhone SE / 8 / 7", icon: 'phone', next: 'mobile-issues' }
+                ]
+            },
+            'mobile-samsung': {
+                title: "Select Samsung Model",
+                options: [
+                    { name: "Galaxy S Series", icon: 'phone', next: 'mobile-issues' },
+                    { name: "Galaxy Z Fold/Flip", icon: 'phone', next: 'mobile-issues' },
+                    { name: "Galaxy A Series", icon: 'phone', next: 'mobile-issues' },
+                    { name: "Galaxy Note", icon: 'phone', next: 'mobile-issues' }
+                ]
+            },
+            'mobile-pixel': { title: "Select Pixel Model", options: [{ name: "Pixel 8/7/6", icon: 'phone', next: 'mobile-issues' }, { name: "Older Pixels", icon: 'phone', next: 'mobile-issues' }] },
+            'mobile-other': { title: "Select Brand", options: [{ name: "Motorola", icon: 'phone', next: 'mobile-issues' }, { name: "LG / OnePlus", icon: 'phone', next: 'mobile-issues' }] },
+            'mobile-issues': {
+                title: "Select Issue",
+                isFinal: true,
+                options: [
+                    { name: "Cracked Screen", icon: 'broken-screen' },
+                    { name: "Battery / Charging", icon: 'battery' },
+                    { name: "Water Damage", icon: 'water' },
+                    { name: "Camera", icon: 'camera' },
+                    { name: "Software Issue", icon: 'software' }
+                ]
+            },
+
+            // === COMPUTERS (Windows/General) ===
+            'computers': {
+                title: "Select Computer Type",
+                options: [
+                    { name: "Windows Laptop", icon: 'laptop', next: 'comp-brand' },
+                    { name: "MacBook / iMac", icon: 'laptop', next: 'mac-models' },
+                    { name: "Desktop PC", icon: 'laptop', next: 'comp-pc-issues' },
+                    { name: "Chromebook", icon: 'laptop', next: 'comp-issues' }
+                ]
+            },
+
+            'mac-models': {
+                title: "Select Mac Model",
+                options: [
+                    { name: "MacBook Pro", icon: 'laptop', next: 'comp-issues' },
+                    { name: "MacBook Air", icon: 'laptop', next: 'comp-issues' },
+                    { name: "iMac / Mac Mini", icon: 'laptop', next: 'comp-pc-issues' }
+                ]
+            },
+
+            'comp-brand': {
+                title: "Select Brand",
+                options: [
+                    { name: "Dell / Alienware", icon: 'laptop', next: 'comp-issues' },
+                    { name: "HP", icon: 'laptop', next: 'comp-issues' },
+                    { name: "Lenovo", icon: 'laptop', next: 'comp-issues' },
+                    { name: "ASUS / Acer", icon: 'laptop', next: 'comp-issues' }
+                ]
+            },
+            'comp-issues': {
+                title: "Select Issue",
+                isFinal: true,
+                options: [
+                    { name: "Broken Screen", icon: 'broken-screen' },
+                    { name: "Battery / Power", icon: 'battery' },
+                    { name: "Slow / Virus", icon: 'software' },
+                    { name: "Keyboard / Trackpad", icon: 'chip' },
+                    { name: "Won't Turn On", icon: 'port' }
+                ]
+            },
+            'comp-pc-issues': {
+                title: "Select Issue",
+                isFinal: true,
+                options: [
+                    { name: "Won't Boot", icon: 'port' },
+                    { name: "Blue Screen", icon: 'software' },
+                    { name: "Hardware Upgrade", icon: 'chip' },
+                    { name: "Virus Removal", icon: 'software' }
+                ]
+            },
+
+            // === MACBOOKS (Direct Access from Main Menu) ===
+            'macbooks': {
+                title: "Select Mac Model",
+                options: [
+                    { name: "MacBook Pro", icon: 'laptop', next: 'comp-issues' },
+                    { name: "MacBook Air", icon: 'laptop', next: 'comp-issues' },
+                    { name: "iMac / Mac Mini", icon: 'laptop', next: 'comp-pc-issues' }
+                ]
+            },
+
+            // === TABLETS ===
+            'tablets': {
+                title: "Select Tablet",
+                options: [
+                    { name: "iPad (Pro/Air/Mini)", icon: 'phone', next: 'tab-issues' },
+                    { name: "Samsung Tab", icon: 'phone', next: 'tab-issues' },
+                    { name: "Microsoft Surface", icon: 'phone', next: 'tab-issues' }
+                ]
+            },
+            'tab-issues': {
+                title: "Select Issue",
+                isFinal: true,
+                options: [
+                    { name: "Cracked Screen", icon: 'broken-screen' },
+                    { name: "Battery / Charging", icon: 'battery' },
+                    { name: "Won't Turn On", icon: 'port' }
+                ]
+            },
+
+            // === GAMING ===
+            'gaming': {
+                title: "Select Console",
+                options: [
+                    { name: "PlayStation", icon: 'gamepad', next: 'game-ps' },
+                    { name: "Xbox", icon: 'gamepad', next: 'game-xbox' },
+                    { name: "Nintendo Switch", icon: 'gamepad', next: 'game-nintendo' }
+                ]
+            },
+            'game-ps': { title: "Select Model", options: [{ name: "PS5", icon: 'gamepad', next: 'game-issues' }, { name: "PS4 / Pro / Slim", icon: 'gamepad', next: 'game-issues' }] },
+            'game-xbox': { title: "Select Model", options: [{ name: "Series X / S", icon: 'gamepad', next: 'game-issues' }, { name: "Xbox One", icon: 'gamepad', next: 'game-issues' }] },
+            'game-nintendo': { title: "Select Model", options: [{ name: "Switch OLED/Lite", icon: 'gamepad', next: 'game-issues' }] },
+            'game-issues': {
+                title: "Select Issue",
+                isFinal: true,
+                options: [
+                    { name: "HDMI Port", icon: 'port' },
+                    { name: "Disc Drive", icon: 'chip' },
+                    { name: "Overheating", icon: 'port' },
+                    { name: "Controller Drift", icon: 'gamepad' }
+                ]
+            },
+
+            // === OTHERS (Simple Flows) ===
+            'servers': {
+                title: "Server Services",
+                isFinal: true,
+                options: [
+                    { name: "RAID Recovery", icon: 'server' },
+                    { name: "Hardware Repair", icon: 'chip' },
+                    { name: "Maintenance", icon: 'setup' }
+                ]
+            },
+            'data': {
+                title: "Data Recovery Needs",
+                isFinal: true,
+                options: [
+                    { name: "Hard Drive Failure", icon: 'hdd' },
+                    { name: "Phone Data", icon: 'phone' },
+                    { name: "Deleted Files", icon: 'software' }
+                ]
+            },
+            'smarthome': {
+                title: "Smart Home",
+                isFinal: true,
+                options: [
+                    { name: "Installation", icon: 'setup' },
+                    { name: "Troubleshooting", icon: 'software' }
+                ]
+            },
+            'it': {
+                title: "IT Support",
+                isFinal: true,
+                options: [
+                    { name: "Network Setup", icon: 'server' },
+                    { name: "Security", icon: 'software' },
+                    { name: "Consulting", icon: 'setup' }
+                ]
+            },
+            'custom': {
+                title: "Custom Solutions",
+                isFinal: true,
+                options: [
+                    { name: "Industrial Tech", icon: 'chip' },
+                    { name: "Unique Repair", icon: 'setup' }
+                ]
+            }
+        };
+
+        let navHistory = [];
+        let currentModalId = '';
+
+        function openModal(id) {
+            const modal = document.getElementById(`modal-${id}`);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                
+                const flowContainer = document.getElementById(`flow-${id}`);
+                if (flowContainer) {
+                    currentModalId = id;
+                    navHistory = []; 
+                    
+                    if (serviceData[id]) {
+                        renderStep(id);
+                    } else {
+                        flowContainer.innerHTML = '<p style="text-align:center">Please contact us for details.</p>';
+                    }
+                }
+            }
+        }
+
+        function closeModal() {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.classList.remove('active');
+            });
+            document.body.style.overflow = 'auto'; 
+            navHistory = [];
+        }
+
+        function closeModalOnBackdrop(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal();
+            }
+        }
+
+        function renderStep(key) {
+            const data = serviceData[key];
+            const container = document.getElementById(`flow-${currentModalId}`);
+            if (!data || !container) return;
+
+            if (navHistory.length === 0 || navHistory[navHistory.length - 1] !== key) {
+                navHistory.push(key);
+            }
+
+            let html = '';
+            
+            html += `<div class="flow-header">`;
+            if (navHistory.length > 1) {
+                html += `<button class="back-btn" onclick="goBack()">‹</button>`;
+            }
+            html += `<div class="flow-title">${data.title}</div>`;
+            html += `</div>`;
+
+            html += `<div class="selection-grid">`;
+            data.options.forEach(opt => {
+                const iconSvg = icons[opt.icon] || icons['setup'];
+                const clickAction = data.isFinal 
+                    ? `showFinalVerification('${opt.name}')` 
+                    : `renderStep('${opt.next}')`;
+                
+                html += `
+                    <div class="selection-card" onclick="${clickAction}">
+                        <div class="selection-icon">${iconSvg}</div>
+                        <div class="selection-name">${opt.name}</div>
+                    </div>
+                `;
+            });
+            html += `</div>`;
+
+            container.innerHTML = html;
+        }
+
+        function goBack() {
+            if (navHistory.length > 1) {
+                navHistory.pop(); 
+                const previousKey = navHistory.pop(); 
+                renderStep(previousKey); 
+            }
+        }
+
+        function showFinalVerification(issueName) {
+            const container = document.getElementById(`flow-${currentModalId}`);
+            
+            let html = `
+                <div class="flow-header">
+                    <button class="back-btn" onclick="goBack()">‹</button>
+                    <div class="flow-title">Service Verification</div>
+                </div>
+                <div class="verified-box">
+                    <svg class="verified-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <h3 style="margin-bottom:0.5rem; color:var(--text)">Yes, We Service This!</h3>
+                    <p style="color:var(--text-light); margin-bottom:1rem">
+                        We are equipped to repair <strong>${issueName}</strong> issues for this device.
+                    </p>
+                    <a href="tel:972-643-8482" class="verified-btn">Call Now: (972) 643-8482</a>
+                    <p style="margin-top:1rem; font-size:0.9rem; color:var(--text-light)">
+                        Or walk in anytime. No appointment needed.
+                    </p>
+                </div>
+            `;
+            container.innerHTML = html;
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // ===== CHANGED: Updated Carousel Logic for Dots =====
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.review-item');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            const inner = document.getElementById('carouselInner');
+            if (inner) {
+                inner.style.transform = `translateX(-${index * 100}%)`;
+                
+                // Update dots
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            const nextIndex = (currentSlide + 1) % totalSlides;
+            showSlide(nextIndex);
+        }
+
+        function prevSlide() {
+            const prevIndex = (currentSlide - 1 + totalSlides) % totalSlides;
+            showSlide(prevIndex);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+        }
+
+        // Auto-advance carousel every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // ===== FAQ ACCORDION =====
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const toggle = element.querySelector('.faq-toggle');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                toggle.textContent = '+';
+            } else {
+                document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                document.querySelectorAll('.faq-toggle').forEach(t => t.textContent = '+');
+                
+                answer.style.display = 'block';
+                toggle.textContent = '−';
+            }
+        }
+    
+        
+        function setActiveNav(sectionId) {
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+            if (!sectionId) return;
+
+            // Prefer data-section if present, otherwise match via onclick handler.
+            let target = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
+            if (!target) {
+                target = Array.from(document.querySelectorAll('.nav-link')).find(btn => {
+                    const oc = btn.getAttribute('onclick') || '';
+                    return oc.includes(`showSection('${sectionId}')`) || oc.includes(`showSection("${sectionId}")`);
+                });
+            }
+            if (target) target.classList.add('active');
+        }
+// ==========================================
+        // SEO "PHANTOM" PAGES ROUTER
+        // - Supports links like:
+        //      /index.html?page=iphone-repair
+        // - Works on static hosting without server rewrites.
+        // ==========================================
+
+        const PAGE_DEFS = [
+            {
+                slug: "iphone-repair",
+                cardTitle: "iPhone Repair (Richardson, TX)",
+                cardDesc: "Screen, battery, charging port, camera, speaker, mic, liquid damage & more.",
+                title: "iPhone Repair in Richardson, TX | Screen, Battery & Charging Port Fix",
+                description: "Fast iPhone repair in Richardson, TX. Screen replacements, battery swaps, charging port repair, camera and speaker fixes, and liquid damage diagnostics. Walk-ins welcome.",
+                h1: "iPhone Repair in Richardson, TX",
+                content: `
+                    <p>If your iPhone has a shattered screen, weak battery, charging port issues, or audio/camera problems, we can help. We focus on clear diagnostics, quality parts, and repairs that hold up long-term.</p>
+                    <h2>Common iPhone Repairs</h2>
+                    <ul>
+                        <li>Screen & LCD replacement (cracked glass, touch issues, no display)</li>
+                        <li>Battery replacement (fast drain, unexpected shutdowns)</li>
+                        <li>Charging port repair (not charging, loose cable)</li>
+                        <li>Camera, microphone, speaker, and button repairs</li>
+                        <li>Liquid damage inspection and restoration options</li>
+                    </ul>
+                    <h2>What to Expect</h2>
+                    <ul>
+                        <li>Walk-in friendly and upfront estimates</li>
+                        <li>Free diagnostics on most issues</li>
+                        <li>Data-safe repair practices whenever possible</li>
+                    </ul>
+                    <p><strong>Need help now?</strong> Visit our shop or use the contact section to call, message, or request service.</p>
+                `
+            },
+            {
+                slug: "ipad-repair",
+                cardTitle: "iPad Repair",
+                cardDesc: "Shattered screens, charging issues, batteries, and software problems.",
+                title: "iPad Repair in Richardson, TX | Screen & Charging Repairs",
+                description: "Professional iPad repair in Richardson, TX. Screen replacements, charging port fixes, battery service, and troubleshooting for iPad models.",
+                h1: "iPad Repair in Richardson, TX",
+                content: `
+                    <p>iPads are great—until a drop cracks the glass or the device stops charging. We repair common iPad issues and help you understand what makes sense to fix versus replace.</p>
+                    <h2>Popular iPad Services</h2>
+                    <ul>
+                        <li>Shattered screen & digitizer replacement</li>
+                        <li>Charging and battery service</li>
+                        <li>Software troubleshooting and OS installs</li>
+                        <li>Data backup and transfer assistance</li>
+                    </ul>
+                `
+            },
+            {
+                slug: "mac-repair",
+                cardTitle: "Mac & MacBook Repair",
+                cardDesc: "Screen, battery, keyboard/trackpad, SSD/RAM upgrades, and board-level diagnostics.",
+                title: "MacBook & iMac Repair in Richardson, TX | Screen, Battery, Upgrades",
+                description: "Mac repair in Richardson, TX: MacBook screen replacement, battery service, keyboard/trackpad repairs, SSD upgrades, RAM upgrades, and liquid damage diagnostics.",
+                h1: "MacBook & iMac Repair in Richardson, TX",
+                content: `
+                    <p>We service MacBooks, iMacs, Mac minis, and other Apple devices—whether you need an upgrade, a hardware fix, or help recovering data.</p>
+                    <h2>Mac Repair & Upgrade Options</h2>
+                    <ul>
+                        <li>MacBook screen replacement and hinge repairs</li>
+                        <li>Battery replacement and charging issues</li>
+                        <li>Keyboard, trackpad, and port repairs</li>
+                        <li>SSD and RAM upgrades (where supported)</li>
+                        <li>Liquid damage diagnostics and restoration options</li>
+                    </ul>
+                `
+            },
+            {
+                slug: "pc-repair",
+                cardTitle: "PC & Laptop Repair",
+                cardDesc: "Windows issues, hardware repairs, installs, tune-ups, and upgrades.",
+                title: "Computer & Laptop Repair in Richardson, TX | Windows PC Service",
+                description: "Affordable computer repair in Richardson, TX: hardware fixes, OS installs, tune-ups, SSD/RAM upgrades, and diagnostics for Dell, HP, Lenovo, Acer, ASUS and more.",
+                h1: "Computer & Laptop Repair in Richardson, TX",
+                content: `
+                    <p>From slow performance to no-boot problems, we troubleshoot and repair Windows PCs and laptops. We also do upgrades that make older systems feel new again.</p>
+                    <h2>PC Services</h2>
+                    <ul>
+                        <li>Diagnostics for no power / no boot / random shutdowns</li>
+                        <li>Operating system install and configuration</li>
+                        <li>SSD upgrades, hard drive replacement, RAM upgrades</li>
+                        <li>Hardware troubleshooting (fans, power supply, motherboard)</li>
+                        <li>Performance tune-up and routine maintenance</li>
+                    </ul>
+                    <p class="muted">We service many makes and models including Dell, HP, Apple, Acer, ASUS, Lenovo, MSI and custom builds.</p>
+                `
+            },
+            {
+                slug: "virus-removal",
+                cardTitle: "Virus & Malware Removal",
+                cardDesc: "Cleanups, security hardening, and prevention recommendations.",
+                title: "Virus & Malware Removal in Richardson, TX | Computer Cleanup",
+                description: "Virus removal in Richardson, TX. Malware cleanup, spyware removal, performance restoration, and security best practices to help prevent reinfection.",
+                h1: "Virus & Malware Removal in Richardson, TX",
+                content: `
+                    <p>If pop-ups, browser hijacks, or slowdowns are making your computer unusable, we can remove malware and get your system stable again.</p>
+                    <h2>What We Do</h2>
+                    <ul>
+                        <li>Virus, spyware, and adware removal</li>
+                        <li>Startup and performance optimization</li>
+                        <li>Security hardening and update checks</li>
+                        <li>Optional antivirus installation guidance</li>
+                    </ul>
+                    <p><strong>Tip:</strong> Backups matter. Ask us about simple, reliable backup options.</p>
+                `
+            },
+            {
+                slug: "data-recovery",
+                cardTitle: "Data Recovery",
+                cardDesc: "Hard drive recovery, SSD issues, backups, and data migration.",
+                title: "Data Recovery in Richardson, TX | Hard Drive & SSD Recovery",
+                description: "Data recovery in Richardson, TX. Options for failed hard drives, corrupted OS, accidental deletion, and data migration to new systems.",
+                h1: "Data Recovery in Richardson, TX",
+                content: `
+                    <p>Lost files can be stressful. We offer data recovery options and practical guidance depending on the device, failure mode, and urgency.</p>
+                    <h2>Recovery & Data Services</h2>
+                    <ul>
+                        <li>Hard drive and SSD recovery evaluation</li>
+                        <li>Data backup systems and migration</li>
+                        <li>New drive installs with data transfer</li>
+                        <li>External drive troubleshooting</li>
+                    </ul>
+                `
+            },
+            {
+                slug: "gaming-pc-repair",
+                cardTitle: "Gaming PC Repair",
+                cardDesc: "Overheating, crashes, GPU/PSU issues, upgrades, and stability tuning.",
+                title: "Gaming PC Repair in Richardson, TX | Overheating, Crashes & Upgrades",
+                description: "Gaming PC repair in Richardson, TX. Fix overheating, crashes, no display, and component issues. GPU/PSU upgrades, thermal service, and stability checks.",
+                h1: "Gaming PC Repair in Richardson, TX",
+                content: `
+                    <p>Gaming rigs push hardware hard. If you're seeing overheating, blue screens, or random crashes, we can diagnose the root cause and recommend reliable fixes.</p>
+                    <h2>Common Gaming PC Issues</h2>
+                    <ul>
+                        <li>Overheating and loud fan problems</li>
+                        <li>Crashing, freezing, blue/black screen errors</li>
+                        <li>No display / GPU instability</li>
+                        <li>Power supply failures and intermittent boot issues</li>
+                        <li>Upgrades: GPU, SSD, RAM, cooling improvements</li>
+                    </ul>
+                `
+            },
+            {
+                slug: "network-it-services",
+                cardTitle: "Network IT Services",
+                cardDesc: "Internet issues, Wi‑Fi setup, printer networking, and small business support.",
+                title: "Network & IT Services in Richardson, TX | Wi‑Fi, Internet & Setup",
+                description: "Network IT services in Richardson, TX. Fix Wi‑Fi and internet connection problems, device setup, printer networking, and small-business tech support.",
+                h1: "Network & IT Services in Richardson, TX",
+                content: `
+                    <p>Whether it’s slow Wi‑Fi, devices that won’t connect, or a new setup that needs to work the first time, we provide reliable IT support for home and small business.</p>
+                    <h2>IT & Networking Help</h2>
+                    <ul>
+                        <li>Internet connection troubleshooting</li>
+                        <li>Wi‑Fi router setup and optimization</li>
+                        <li>Printer setup and network configuration</li>
+                        <li>Device setup, data migration, and user training</li>
+                    </ul>
+                `
+            },
+            {
+                slug: "computer-repair-dallas",
+                cardTitle: "Computer Repair (Dallas, TX)",
+                cardDesc: "Service page for Dallas-area search visibility.",
+                title: "Computer Repair in Dallas, TX | PC, Laptop & Data Services",
+                description: "Computer repair service page for Dallas, TX searches. Diagnostics, hardware repair, OS installs, upgrades, virus removal, and data recovery.",
+                h1: "Computer Repair in Dallas, TX",
+                content: `
+                    <p>We regularly help customers across the Dallas area with PC and laptop issues—from slow systems to hardware failures. If you're nearby, reach out for availability and service options.</p>
+                    <h2>Services Offered</h2>
+                    <ul>
+                        <li>Diagnostics and troubleshooting</li>
+                        <li>SSD / RAM upgrades and hardware repair</li>
+                        <li>Operating system install and configuration</li>
+                        <li>Virus removal and performance tune-up</li>
+                        <li>Data backup and recovery options</li>
+                    </ul>
+                `
+            }
+        ];
+
+        function getBaseUrl() {
+            try {
+                return window.location.origin + window.location.pathname.replace(/\?.*$/, "");
+            } catch {
+                return "./";
+            }
+        }
+
+        function setMetaForPage(pageDef) {
+            const title = pageDef?.title || "MacroGeeks Tech | Professional Tech Repair & IT Services";
+            document.title = title;
+
+            const desc = pageDef?.description || (document.querySelector('meta[name="description"]')?.getAttribute('content') || "");
+            const meta = document.getElementById("meta-description");
+            if (meta && desc) meta.setAttribute("content", desc);
+
+            const canonical = document.getElementById("canonical-url");
+            if (canonical) {
+                const base = getBaseUrl();
+                const url = pageDef ? `${base}?page=${encodeURIComponent(pageDef.slug)}` : base;
+                canonical.setAttribute("href", url);
+            }
+        }
+
+        function renderSeoIndex() {
+            const grid = document.getElementById("seo-pages-grid");
+            const footerLinks = document.getElementById("footer-seo-links");
+            if (!grid) return;
+
+            const cardSvg = `<svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>`;
+
+            grid.innerHTML = PAGE_DEFS.map(p => `
+                <div class="seo-page-card">
+                    <h3>${p.cardTitle}</h3>
+                    <p>${p.cardDesc}</p>
+                    <a href="?page=${encodeURIComponent(p.slug)}" onclick="event.preventDefault(); navigateToSeoPage('${p.slug}');">
+                        ${cardSvg} View page
+                    </a>
+                </div>
+            `).join("");
+
+            if (footerLinks) {
+                footerLinks.innerHTML = PAGE_DEFS.slice(0, 7).map(p => `
+                    <li><a href="?page=${encodeURIComponent(p.slug)}" onclick="event.preventDefault(); navigateToSeoPage('${p.slug}');">${p.cardTitle}</a></li>
+                `).join("");
+            }
+        }
+
+        // ====================================================================
+        // CHANGED: When navigating between SEO index and a specific SEO page,
+        //          we now hide/show the right wrapper so "View page" feels like
+        //          something happened immediately.
+        // ORIGINAL:
+        // function navigateHome() {
+        //   ... always went to home section ...
+        // }
+        //
+        // CHANGED:
+        // - navigateHome() => true "home" reset
+        // - navigateHomeToSeoIndex() => stays on SEO pages section (index view)
+        // ====================================================================
+        function navigateHome() {
+            const base = getBaseUrl();
+            history.pushState({ page: null }, "", base);
+            setMetaForPage(null);
+
+            // Reset SEO UI
+            const indexWrap = document.getElementById("seo-pages-index");
+            if (indexWrap) indexWrap.style.display = "block";
+            const detail = document.getElementById("seo-page-detail");
+            if (detail) detail.style.display = "none";
+            const content = document.getElementById("seo-page-content");
+            if (content) content.innerHTML = "";
+
+            showSection('home');
+            setActiveNav('home');
+        }
+
+        function navigateHomeToSeoIndex() {
+            const base = getBaseUrl();
+            history.pushState({ page: null }, "", base);
+            setMetaForPage(null);
+
+            const indexWrap = document.getElementById("seo-pages-index");
+            if (indexWrap) indexWrap.style.display = "block";
+            const detail = document.getElementById("seo-page-detail");
+            if (detail) detail.style.display = "none";
+            const content = document.getElementById("seo-page-content");
+            if (content) content.innerHTML = "";
+
+            showSection('seo-pages');
+
+            const sectionEl = document.getElementById("seo-pages");
+            if (sectionEl) sectionEl.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function navigateToSeoPage(slug) {
+            const pageDef = PAGE_DEFS.find(p => p.slug === slug);
+            if (!pageDef) return;
+
+            history.pushState({ page: slug }, "", `?page=${encodeURIComponent(slug)}`);
+            setMetaForPage(pageDef);
+
+            showSection('seo-pages');
+            setActiveNav(null);
+
+            // Hide the index cards and show the detail view so it feels like
+            // a page opened (this was the main reason it looked like "nothing" happened).
+            const indexWrap = document.getElementById("seo-pages-index");
+            if (indexWrap) indexWrap.style.display = "none";
+
+            const detail = document.getElementById("seo-page-detail");
+            const content = document.getElementById("seo-page-content");
+            const crumb = document.getElementById("seo-breadcrumb-current");
+
+            if (crumb) crumb.textContent = pageDef.cardTitle;
+            if (content) {
+                content.innerHTML = `
+                    <h1>${pageDef.h1}</h1>
+                    ${pageDef.content}
+                    <hr style="margin:2rem 0; opacity:0.25;">
+                    <p><strong>Service area:</strong> Richardson, TX and nearby cities (including Dallas area depending on scheduling). Use our contact section for the quickest help.</p>
+                `;
+            }
+            if (detail) detail.style.display = "block";
+
+            // Scroll directly to the detail card so the user immediately sees the content.
+            if (detail) detail.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+
+        function handleInitialRoute() {
+            renderSeoIndex();
+
+            // Always default to the index being visible.
+            const indexWrap = document.getElementById("seo-pages-index");
+            if (indexWrap) indexWrap.style.display = "block";
+            const detail = document.getElementById("seo-page-detail");
+            if (detail) detail.style.display = "none";
+
+            const url = new URL(window.location.href);
+            const slug = url.searchParams.get("page");
+
+            if (slug) {
+                const pageDef = PAGE_DEFS.find(p => p.slug === slug);
+                if (pageDef) {
+                    navigateToSeoPage(slug);
+                    return;
+                }
+            }
+
+            setMetaForPage(null);
+        }
+
+        // Handle browser back/forward
+        window.addEventListener("popstate", () => {
+            const url = new URL(window.location.href);
+            const slug = url.searchParams.get("page");
+            if (slug) {
+                navigateToSeoPage(slug);
+            } else {
+                // If user is on the SEO section and hits back, show the SEO index.
+                // Otherwise, fall back to home.
+                const seoSectionActive = document.getElementById("seo-pages")?.classList.contains("active");
+                if (seoSectionActive) {
+                    navigateHomeToSeoIndex();
+                } else {
+                    navigateHome();
+                }
+            }
+        });
+
+        // Run after initial DOM is ready
+        document.addEventListener("DOMContentLoaded", handleInitialRoute);
+</script>
+</body>
+</html>
